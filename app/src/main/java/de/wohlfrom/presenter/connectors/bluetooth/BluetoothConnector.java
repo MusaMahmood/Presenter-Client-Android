@@ -344,4 +344,14 @@ public class BluetoothConnector extends Activity
     public void onNextSlide() {
         mPresenterControl.sendCommand(Command.NEXT_SLIDE);
     }
+
+    @Override
+    public void endPresentation() {
+        mPresenterControl.sendCommand(Command.ESCAPE);
+    }
+
+    @Override
+    public void beginPresentation() {
+        mPresenterControl.sendCommand(Command.BEGIN);
+    }
 }

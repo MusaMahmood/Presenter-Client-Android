@@ -79,6 +79,11 @@ public class Presenter extends Fragment {
          * Called if the server should switch to the next slide.
          */
         void onNextSlide();
+
+        void endPresentation();
+
+        void beginPresentation();
+
     }
 
     /**
@@ -124,6 +129,22 @@ public class Presenter extends Fragment {
         prevSlideButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 mListener.onPrevSlide();
+            }
+        });
+
+        Button endPresentationButton = (Button) getActivity().findViewById(R.id.end_pres_button);
+        endPresentationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.endPresentation();
+            }
+        });
+
+        Button startPresentationButton = (Button) getActivity().findViewById(R.id.start_pres_button);
+        startPresentationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mListener.beginPresentation();
             }
         });
 

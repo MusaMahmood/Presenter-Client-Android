@@ -12,8 +12,19 @@ public enum Command {
     /**
      * Request switch to next slide.
      */
-    NEXT_SLIDE("nextSlide", 1, 1);
+    NEXT_SLIDE("nextSlide", 1, 1),
 
+    /**
+     * Escape:
+     */
+    ESCAPE("endPres", 1 ,1),
+
+    BEGIN("begin", 1 ,1);
+
+    /**
+     *
+     */
+//    POTATO_ROTATO("doSomething", 1, 1);
     /**
      * The command to send.
      */
